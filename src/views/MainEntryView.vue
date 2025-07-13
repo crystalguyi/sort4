@@ -3,20 +3,22 @@
         <el-header style="height: 100px;">
         </el-header>
         <el-container style="height: 1000px">
-            <!-- 主房间content  -->
-            <el-main class="gy-chat-room-content">
-                <div>
-                    <el-button @click="btnAAclick">开始监听</el-button>
-                </div>
+                <!-- 主房间content  -->
+                <el-main class="gy-chat-room-content">
+                    <div>
+                        <!-- <GameView></GameView> -->
+                        <ChatDialog></ChatDialog>
+                        <el-button @click="btnAAclick">开始监听</el-button>
+                    </div>
 
-                <audio id="testAudio" autoplay="autoplay"></audio>
-            </el-main>   
-        
+                    <audio id="testAudio" autoplay="autoplay"></audio>
+                </el-main>   
+            
 
-            <!-- 聊天框 -->
-            <el-aside class="gy-chat-room-chatlist-container">
-                <chatter></chatter>
-            </el-aside>
+                <!-- 聊天框 -->
+                <el-aside class="gy-chat-room-chatlist-container">
+                    <chatter></chatter>
+                </el-aside>
         </el-container>
         <el-footer style="height: 100px;">
 
@@ -32,7 +34,8 @@ import { useRouter } from 'vue-router'
 import * as signalR from '@microsoft/signalr'
 
 import chatter from '@/components/chatter.vue'
-
+import GameView from '../components/GameView.vue'
+import ChatDialog from '../components/ChatDialog.vue'
 
 let chatHub;
 

@@ -2,7 +2,7 @@
     <div class="chat-background">
         <el-scrollbar ref="scrollbar" style="height: 200px;">
             <div v-for="(message, index) in messages" :key="index" 
-            :class="['message', message.sender]">
+                :class="['message', message.sender]">
                 <div class="username" v-if="message.sender === 'received'">
                     {{ message.username }}
                 </div>
@@ -27,6 +27,7 @@
 
 <script setup>
 import { ref } from 'vue';
+
 let userMsg = ref('');
 const scrollbar = ref(null);
 
