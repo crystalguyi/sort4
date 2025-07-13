@@ -1,20 +1,24 @@
 <template>
     <el-container>
-        <!-- 主房间content  -->
-        <el-main class="gy-chat-room-content">
-            <div>
-                <button @click="btnAAclick">开始监听</button>
-            </div>
+        <el-header style="height: 100px;">
+        </el-header>
+        <el-container style="height: 1000px">
+            <!-- 主房间content  -->
+            <el-main class="gy-chat-room-content">
+                <div>
+                    <el-button @click="btnAAclick">开始监听</el-button>
+                </div>
 
-            <audio id="testAudio" autoplay="autoplay"></audio>
-        </el-main>   
-    
+                <audio id="testAudio" autoplay="autoplay"></audio>
+            </el-main>   
+        
 
-        <!-- 聊天框 -->
-        <el-aside class="gy-chat-room-chatlist-container">
-            <chatter></chatter>
-        </el-aside>
-        <el-footer>
+            <!-- 聊天框 -->
+            <el-aside class="gy-chat-room-chatlist-container">
+                <chatter></chatter>
+            </el-aside>
+        </el-container>
+        <el-footer style="height: 100px;">
 
         </el-footer>
     </el-container>
@@ -91,7 +95,14 @@ async function  btnAAclick(){
 }
 
 </script>
-<style >
+<style>
+.gy-chat-room-content{
+    background-color: beige;
+    width: 300px;
+}
 
+.gy-chat-room-chatlist-containe{
+    width: 1fr;
+}
 
 </style>
